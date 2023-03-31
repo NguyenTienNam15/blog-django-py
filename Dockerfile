@@ -4,6 +4,8 @@ USER root
 
 COPY . /tmp/src
 
+RUN pip install -U pip
+
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
 
 RUN rm -rf /tmp/src/.git* && \
