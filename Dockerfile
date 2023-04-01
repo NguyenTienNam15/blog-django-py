@@ -5,7 +5,7 @@ USER root
 COPY . /tmp/src
 
 RUN yum -y install epel-release && yum clean all
-RUN yum -y install python-pip && yum clean all
+RUN yum -y install python35-pip && yum clean all
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
 
