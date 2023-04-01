@@ -4,8 +4,8 @@ USER root
 
 COPY . /tmp/src
 
-RUN yum -y install --enablerepo="epel" python-pip && yum clean all
-RUN pip install -U pip
+RUN yum -y install epel-release && yum clean all
+RUN yum -y install python-pip && yum clean all
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
 
