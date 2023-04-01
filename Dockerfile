@@ -4,7 +4,7 @@ USER root
 
 COPY . /tmp/src
 
-RUN yum install python-pip && \
+RUN yum install python35-pip && \
     pip install -U pip
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
