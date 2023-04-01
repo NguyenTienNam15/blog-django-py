@@ -4,7 +4,8 @@ USER root
 
 COPY . /tmp/src
 
-RUN yum install python-pip && pip install -U pip
+RUN yum install python-pip && \
+    pip install -U pip
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
 
