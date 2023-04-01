@@ -4,8 +4,8 @@ USER root
 
 COPY . /tmp/src
 
-RUN yum install python35-pip && \
-    pip install -U pip
+RUN yum -y install --enablerepo="epel" python-pip && yum clean all
+RUN pip install -U pip
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
 
